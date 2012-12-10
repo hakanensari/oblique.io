@@ -10,7 +10,6 @@ body {
   color: #fff;
   font: 24px/1.5 'museo-sans', serif;
   text-align: center;
-  z-index: 1;
 }
 .container p {
   padding: 15px 0;
@@ -39,4 +38,5 @@ body {
        -o-transition-duration: 120s;
          -transition-duration: 120s;
   opacity: 0;
+  z-index: -1;
 }
