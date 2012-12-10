@@ -5,13 +5,13 @@ try {
 $(function() {
   // This is a random oblique strategy.
   var Strategy = Backbone.Model.extend({
-    url: 'http://api.oblique.io?jsoncallback=?',
+    url: '//api.oblique.io?jsoncallback=?',
   });
 
   // Fetch some random images from Flickr.
   var Image = Backbone.Model.extend({
     src: function() {
-      return "http://farm"        + this.get('farm') +
+      return "//farm"             + this.get('farm') +
              ".staticflickr.com/" + this.get('server') +
              "/"                  + this.get('id') +
              "_"                  + this.get('secret') +
@@ -33,7 +33,7 @@ $(function() {
         .splice(0, 1)
         .join()
 
-      this.url = 'http://api.flickr.com/services/rest/?jsoncallback=?&' +
+      this.url = '//api.flickr.com/services/rest/?jsoncallback=?&' +
         $.param({
           api_key:      "22e9685a8bef1253e96ffd92ebc6c676",
           content_type: 1,
