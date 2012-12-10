@@ -25,10 +25,18 @@ body {
   background-attachment: fixed;
   background-position: center;
   -webkit-background-size:cover;
-  -moz-background-size:cover;
-  -o-background-size:cover;
-  background-size:cover;
+     -moz-background-size:cover;
+      -ms-background-size:cover;
+       -o-background-size:cover;
+          background-size:cover;
   -webkit-filter: blur(40px);
+     -moz-filter: blur(40px);
+      -ie-filter: blur(40px);
+       -o-filter: blur(40px);
+         -filter: blur(40px);
   -webkit-transition-duration: 120s;
+     -moz-transition-duration: 120s;
+       -o-transition-duration: 120s;
+         -transition-duration: 120s;
   opacity: 0;
 }
