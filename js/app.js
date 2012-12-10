@@ -48,15 +48,8 @@ $(function() {
       return(response.photos.photo);
     },
 
-    sample: function(success, error) {
-      this.fetch({
-        success: function(collection, _, _) {
-          image = collection.models[Math.floor(Math.random() * collection.models.length)]
-          success(image);
-        },
-
-        error: error
-      });
+    sample: function() {
+      return this.models[Math.floor(Math.random() * this.models.length)]
     }
   });
 
@@ -68,15 +61,14 @@ $(function() {
       $container.html('<p>' + strategy.get('phrase') + '</p>');
 
       var images = new Images(strategy.get('phrase'));
-      images.sample(
-        function(image, _, _) {
+      images.fetch({
+        success: function(images, _, _) {
           $('.cover')
             .css({
-              'background-image': 'url(' + image.src() + ')',
-              opacity: 1
+              'background-image': 'url(' + images.sample().src() + ')',
             })
         }
-      );
+      });
     }
   });
 });
