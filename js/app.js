@@ -46,7 +46,7 @@ $(function() {
   }, {
     // Searches Flickr for a phrase, scoping query by browser's location.
     //
-    // phrase -   A search phrase.
+    // phrase   - A search phrase.
     // callback - A function which is called with a random image.
     search: function(phrase, callback) {
       (new Location).fetch({
