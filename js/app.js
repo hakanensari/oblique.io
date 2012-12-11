@@ -5,7 +5,7 @@ try {
 $(function() {
   // The browser's location.
   var Location = Backbone.Model.extend({
-    url: 'http://freegeoip.net/json/?callback=?'
+    url: '//freegeoip.net/json/?callback=?'
   });
 
   // A random strategy.
