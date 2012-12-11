@@ -85,7 +85,7 @@ $(function() {
 
   // Fetch a random strategy.
   (new Strategy).fetch({
-    success: function(strategy, _, _) {
+    success: function(strategy) {
       var $container = $('.container');
       $container.html('<p>' + strategy.get('phrase') + '</p>');
 
