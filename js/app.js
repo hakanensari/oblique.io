@@ -10,7 +10,7 @@ $(function() {
 
   // A random strategy.
   var Strategy = Backbone.Model.extend({
-    url: '//api.oblique.io?callback=?',
+    url: '//oblique.io?callback=?',
 
     parse: function(response) {
       return { phrase: response }
